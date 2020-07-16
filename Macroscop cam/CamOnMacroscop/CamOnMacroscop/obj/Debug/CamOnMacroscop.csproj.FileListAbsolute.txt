@@ -1,0 +1,15 @@
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\bin\Debug\CamOnMacroscop.exe.config
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\bin\Debug\CamOnMacroscop.exe
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\bin\Debug\CamOnMacroscop.pdb
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\bin\Debug\Interop.AXVLC.dll
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.csprojAssemblyReference.cache
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\Interop.AXVLC.dll
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.csproj.ResolveComReference.cache
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.Form1.resources
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.Properties.Resources.resources
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.csproj.GenerateResource.cache
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.csproj.CoreCompileInputs.cache
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.exe
+C:\Users\камера\Source\Repos\CamOnMacroscop\CamOnMacroscop\obj\Debug\CamOnMacroscop.pdb
