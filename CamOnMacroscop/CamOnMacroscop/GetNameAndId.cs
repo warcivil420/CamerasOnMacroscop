@@ -1,26 +1,29 @@
-﻿using System.Xml;
+using System.Xml;
 using System.Net;
 namespace CamOnMacroscop
 {
     class GetInformationOfConnection
     {
         // информация об подключаемых url две части урл нужны для более удобной передачи всего урл камеры в форму
-        private string partOfUrl1 = "http://demo.macroscop.com:8080/mobile?login=root&channelid=";
-        private string partOfUrl2 = "&resolutionX=640&resolutionY=480&fps=25";
+        private string partOfUrl1;
+        private string partOfUrl2;
 
         //url для парсинга id и name в Xml формате
-        private string url = "http://demo.macroscop.com:8080/configex?login=root";
+        private string url;
 
         //для работы с xml документом
         private XmlDocument xDoc = new XmlDocument();
         private XmlElement xRoot;
 
         //массив хранит id и name
-        private int j = 0, i = 0;
         private string[,] masNameAndId = new string[2, 5];
-    
-
-
+        
+        public GetInformationOfConnection() // задаем стандартные url конструктора
+        {
+            partOfUrl1 = "http://demo.macroscop.com:8080/mobile?login=root&channelid=";
+            partOfUrl2 = "&resolutionX=640&resolutionY=480&fps=25";
+            url = "http://demo.macroscop.com:8080/configex?login=root";
+        }
         public string GetId(int numberId)
         {
             return masNameAndId[0, numberId];
@@ -34,7 +37,7 @@ namespace CamOnMacroscop
         public void ParseIndAndUrl() //парсим урл заполняем Id и Name
         {
 
-            i = j = 0;
+            int i = 0, j = 0;
             xDoc.LoadXml(new WebClient().DownloadString(url));
             xRoot = xDoc.DocumentElement;
             foreach (XmlNode xnode in xRoot)
