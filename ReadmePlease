@@ -1,5 +1,0 @@
-1 установить vlc по пути C:\Program Files(x86)\VideoLAN\VLC
-плагин ActiveX при установке обязателен
-в папке проекта ~bin/release/ запустить exe файл
-
-vlc есть внутри проекта
