@@ -1,0 +1,3 @@
+программа требует плагин ActiveX для работы, внутри проекта есть  VLС плеер 
+установите его по пути program filex(x86)/VideoLan/Vlc 
+~bin/release запустите exe
