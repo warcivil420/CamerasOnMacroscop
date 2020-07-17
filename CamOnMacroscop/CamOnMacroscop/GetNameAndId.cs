@@ -17,7 +17,7 @@ namespace CamOnMacroscop
 
         //массив хранит id и name
         private int j = 0, i = 0;
-        public string[,] masNameAndId = new string[2, 5];
+        private string[,] masNameAndId = new string[2, 5];
     
 
 
