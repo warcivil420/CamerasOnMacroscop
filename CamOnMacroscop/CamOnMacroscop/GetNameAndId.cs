@@ -22,7 +22,9 @@ namespace CamOnMacroscop
         {
             partOfUrl1 = "http://demo.macroscop.com:8080/mobile?login=root&channelid=";
             partOfUrl2 = "&resolutionX=640&resolutionY=480&fps=25";
-            url = "http://demo.macroscop.com:8080/configex?login=root";
+          // две части урл для удобного возврата всего урл вместе c id
+
+            url = "http://demo.macroscop.com:8080/configex?login=root"; // url для xml
         }
         public string GetId(int numberId)
         {
