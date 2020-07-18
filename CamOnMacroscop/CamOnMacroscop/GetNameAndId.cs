@@ -5,44 +5,42 @@ namespace CamOnMacroscop
     class GetInformationOfConnection
     {
         // информация об подключаемых url две части урл нужны для более удобной передачи всего урл камеры в форму
-        private string partOfUrl1;
-        private string partOfUrl2;
+        private string _partOfUrl1;
+        private string _partOfUrl2;
 
         //url для парсинга id и name в Xml формате
-        private string url;
+        private string _url;
 
         //для работы с xml документом
-        private XmlDocument xDoc = new XmlDocument();
-        private XmlElement xRoot;
+        private XmlDocument _xDoc = new XmlDocument();
+        private XmlElement _xRoot;
 
         //массив хранит id и name
-        private string[,] masNameAndId = new string[2, 5];
-        
-        public GetInformationOfConnection() // задаем стандартные url конструктора
-        {
-            partOfUrl1 = "http://demo.macroscop.com:8080/mobile?login=root&channelid=";
-            partOfUrl2 = "&resolutionX=640&resolutionY=480&fps=25";
-          // две части урл для удобного возврата всего урл вместе c id
+        private string[,] _masNameAndId = new string[2, 5];
 
-            url = "http://demo.macroscop.com:8080/configex?login=root"; // url для xml
+        public GetInformationOfConnection() // задаем стандартные параметры url конструктора
+        {
+            _partOfUrl1 = "http://demo.macroscop.com:8080/mobile?login=root&channelid=";
+            _partOfUrl2 = "&resolutionX=640&resolutionY=480&fps=25";
+            _url = "http://demo.macroscop.com:8080/configex?login=root";
         }
         public string GetId(int numberId)
         {
-            return masNameAndId[0, numberId];
+            return _masNameAndId[0, numberId];
         }
-        public string GetName(int numberName)  
+        public string GetName(int numberName)
         {
-          
-            return masNameAndId[1, numberName];
+
+            return _masNameAndId[1, numberName];
         }
 
         public void ParseIndAndUrl() //парсим урл заполняем Id и Name
         {
 
             int i = 0, j = 0;
-            xDoc.LoadXml(new WebClient().DownloadString(url));
-            xRoot = xDoc.DocumentElement;
-            foreach (XmlNode xnode in xRoot)
+            _xDoc.LoadXml(new WebClient().DownloadString(_url));
+            _xRoot = _xDoc.DocumentElement;
+            foreach (XmlNode xnode in _xRoot)
             {
                 if (xnode.Name == "Channels")
                 {
@@ -52,12 +50,12 @@ namespace CamOnMacroscop
                         {
                             if (attr.Name == "Id")
                             {
-                                masNameAndId[0, j] = attr.Value;
+                                _masNameAndId[0, j] = attr.Value;
                                 j++;
                             }
                             if (attr.Name == "Name")
                             {
-                                masNameAndId[1, i] = attr.Value;
+                                _masNameAndId[1, i] = attr.Value;
                                 i++;
                             }
                         }
@@ -68,7 +66,7 @@ namespace CamOnMacroscop
         }
         public string GetCamUrl(string Id)  // собираем полученную url для вывода потока mpeg
         {
-            return partOfUrl1 + Id + partOfUrl2;
+            return _partOfUrl1 + Id + _partOfUrl2;
         }
     }
 }
